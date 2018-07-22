@@ -1,0 +1,117 @@
+-------------------> Now we print device_lib.list_local_devices()
+[name: "/device:CPU:0"
+device_type: "CPU"
+memory_limit: 268435456
+locality {
+}
+incarnation: 2757874772767743963
+, name: "/device:GPU:0"
+device_type: "GPU"
+memory_limit: 12050019124
+locality {
+  bus_id: 2
+  numa_node: 1
+  links {
+  }
+}
+incarnation: 14431806654244601129
+physical_device_desc: "device: 0, name: Tesla K80, pci bus id: 0000:85:00.0, compute capability: 3.7"
+]
+
+Device mapping:
+/job:localhost/replica:0/task:0/device:GPU:0 -> device: 0, name: Tesla K80, pci bus id: 0000:85:00.0, compute capability: 3.7
+--------------------> now we print device_placement
+MatMul: (MatMul): /job:localhost/replica:0/task:0/device:GPU:0
+b: (Const): /job:localhost/replica:0/task:0/device:GPU:0
+a: (Const): /job:localhost/replica:0/task:0/device:GPU:0
+[[22. 28.]
+ [49. 64.]]
+
+Device mapping:
+/job:localhost/replica:0/task:0/device:GPU:0 -> device: 0, name: Tesla K80, pci bus id: 0000:85:00.0, compute capability: 3.7
+manual device placement to cpu:0 --------------------------###
+MatMul_1: (MatMul): /job:localhost/replica:0/task:0/device:GPU:0
+MatMul: (MatMul): /job:localhost/replica:0/task:0/device:GPU:0
+b_1: (Const): /job:localhost/replica:0/task:0/device:CPU:0
+a_1: (Const): /job:localhost/replica:0/task:0/device:CPU:0
+b: (Const): /job:localhost/replica:0/task:0/device:GPU:0
+a: (Const): /job:localhost/replica:0/task:0/device:GPU:0
+[[22. 28.]
+ [49. 64.]]
+
+Device mapping:
+/job:localhost/replica:0/task:0/device:GPU:0 -> device: 0, name: Tesla K80, pci bus id: 0000:85:00.0, compute capability: 3.7
+ using single gpu but with allow_soft_placement == True: /device:GPU:2  ------------------######
+MatMul_2: (MatMul): /job:localhost/replica:0/task:0/device:GPU:0
+MatMul_1: (MatMul): /job:localhost/replica:0/task:0/device:GPU:0
+MatMul: (MatMul): /job:localhost/replica:0/task:0/device:GPU:0
+b_2: (Const): /job:localhost/replica:0/task:0/device:GPU:0
+a_2: (Const): /job:localhost/replica:0/task:0/device:GPU:0
+b_1: (Const): /job:localhost/replica:0/task:0/device:CPU:0
+a_1: (Const): /job:localhost/replica:0/task:0/device:CPU:0
+b: (Const): /job:localhost/replica:0/task:0/device:GPU:0
+a: (Const): /job:localhost/replica:0/task:0/device:GPU:0
+[[22. 28.]
+ [49. 64.]]
+
+Device mapping:
+/job:localhost/replica:0/task:0/device:GPU:0 -> device: 0, name: Tesla K80, pci bus id: 0000:85:00.0, compute capability: 3.7
+using a single gpu on multi-gpu system: /device:GPU:2 -------------------------###
+-------------------> Now we print device_lib.list_local_devices()
+[name: "/device:CPU:0"
+device_type: "CPU"
+memory_limit: 268435456
+locality {
+}
+incarnation: 12247752880923906299
+, name: "/device:GPU:0"
+device_type: "GPU"
+memory_limit: 12049770087
+locality {
+  bus_id: 1
+  links {
+  }
+}
+incarnation: 12172238901090321741
+physical_device_desc: "device: 0, name: Tesla K80, pci bus id: 0000:07:00.0, compute capability: 3.7"
+]
+
+Device mapping:
+/job:localhost/replica:0/task:0/device:GPU:0 -> device: 0, name: Tesla K80, pci bus id: 0000:07:00.0, compute capability: 3.7
+--------------------> now we print device_placement
+MatMul: (MatMul): /job:localhost/replica:0/task:0/device:GPU:0
+b: (Const): /job:localhost/replica:0/task:0/device:GPU:0
+a: (Const): /job:localhost/replica:0/task:0/device:GPU:0
+[[22. 28.]
+ [49. 64.]]
+
+Device mapping:
+/job:localhost/replica:0/task:0/device:GPU:0 -> device: 0, name: Tesla K80, pci bus id: 0000:07:00.0, compute capability: 3.7
+manual device placement to cpu:0 --------------------------###
+MatMul_1: (MatMul): /job:localhost/replica:0/task:0/device:GPU:0
+MatMul: (MatMul): /job:localhost/replica:0/task:0/device:GPU:0
+b_1: (Const): /job:localhost/replica:0/task:0/device:CPU:0
+a_1: (Const): /job:localhost/replica:0/task:0/device:CPU:0
+b: (Const): /job:localhost/replica:0/task:0/device:GPU:0
+a: (Const): /job:localhost/replica:0/task:0/device:GPU:0
+[[22. 28.]
+ [49. 64.]]
+
+Device mapping:
+/job:localhost/replica:0/task:0/device:GPU:0 -> device: 0, name: Tesla K80, pci bus id: 0000:07:00.0, compute capability: 3.7
+ using single gpu but with allow_soft_placement == True: /device:GPU:2  ------------------######
+MatMul_2: (MatMul): /job:localhost/replica:0/task:0/device:GPU:0
+MatMul_1: (MatMul): /job:localhost/replica:0/task:0/device:GPU:0
+MatMul: (MatMul): /job:localhost/replica:0/task:0/device:GPU:0
+b_2: (Const): /job:localhost/replica:0/task:0/device:GPU:0
+a_2: (Const): /job:localhost/replica:0/task:0/device:GPU:0
+b_1: (Const): /job:localhost/replica:0/task:0/device:CPU:0
+a_1: (Const): /job:localhost/replica:0/task:0/device:CPU:0
+b: (Const): /job:localhost/replica:0/task:0/device:GPU:0
+a: (Const): /job:localhost/replica:0/task:0/device:GPU:0
+[[22. 28.]
+ [49. 64.]]
+
+Device mapping:
+/job:localhost/replica:0/task:0/device:GPU:0 -> device: 0, name: Tesla K80, pci bus id: 0000:07:00.0, compute capability: 3.7
+using a single gpu on multi-gpu system: /device:GPU:2 -------------------------###
