@@ -44,3 +44,6 @@ this section.
 Each job can only use a single GPU. By default that single GPU is called
 ``GPU:0``. The default cannot be overwirtten. TF Manual Device Placement
 is not applicable to HTGC.
+
+# Reference
+https://www.tensorflow.org/guide/using_gpu
