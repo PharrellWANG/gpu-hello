@@ -1,6 +1,6 @@
 # About Manual Device Placement in HTGC
 
-# Observations
+# Experiments and Observations
 
 1. When we ``condor_submit`` a job with ``nvidia-smi`` to query the GPU
 status, typically we will see something like the picture below:
@@ -35,6 +35,9 @@ device that is not available.)
 <img src="special-rule.png" alt="sr" width="450px" />
 
 > Each job is assigned to a single GPU. -- abchan
+
+Note: You may take a look at ``gpu_hello.py`` and submit ``run_gpu_hello.condor`` to verify points 2-6 in
+this section.
 
 # Conclusions
 
