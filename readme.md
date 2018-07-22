@@ -5,7 +5,7 @@
 1. When we ``condor_submit`` a job with ``nvidia-smi`` to query the GPU
 status, typically we will see something like the picture below:
 
-<img src="nvidia-smi.png" alt="nvidia-smi.png" width="200px"/>
+<img src="nvidia-smi.png" alt="nvidia-smi.png" width="450px"/>
 
 It seems we have four nodes available from the whole cluster. We
 natually thought we can manually assign tasks to those four nodes.
@@ -32,7 +32,7 @@ device that is not available.)
 7. And, there is one point in the **HTCC&HTGC tutorial slides** from
 **abchan**:
 
-<img src="special-rule.png" alt="sr" width="200px" />
+<img src="special-rule.png" alt="sr" width="450px" />
 
 > Each job is assigned to a single GPU. -- abchan
 
