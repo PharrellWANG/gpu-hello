@@ -5,7 +5,7 @@
 1. When we ``condor_submit`` a job with ``nvidia-smi`` to query the GPU
 status, typically we will see something like the picture below:
 
-![nvidia-smi](nvidia-smi.jpg)
+![nvidia-smi](nvidia-smi.png)
 
 It seems we have four nodes available from the whole cluster. We
 natually thought we can manually assign tasks to those four nodes.
@@ -19,8 +19,7 @@ problem.
 4. If we attempt to specify to use ``GPU:0`` for some operations, no 
 prblem.
 
-5. If we attempt to specify to use ``GPU:2`` or ``GPU:3`` for some
-oeprations, at the same time, we set ``allow_soft_placement`` to 
+5. If we attempt to specify to use ``GPU:2`` or ``GPU:3`` for some oeprations, at the same time, we set ``allow_soft_placement`` to 
 True in the configuration option when creating the session, in the end 
 ``GPU:0`` will be used.
 
