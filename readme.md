@@ -5,7 +5,7 @@
 1. When we ``condor_submit`` a job with ``nvidia-smi`` to query the GPU
 status, typically we will see something like the picture below:
 
-![nvidia-smi](nvidia-smi.png)
+![nvidia-smi](nvidia-smi.png =250x)
 
 It seems we have four nodes available from the whole cluster. We
 natually thought we can manually assign tasks to those four nodes.
