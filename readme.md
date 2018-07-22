@@ -32,7 +32,7 @@ device that is not available.)
 7. And, there is one point in the **HTCC&HTGC tutorial slides** from
 **abchan**:
 
-<img src="special-rule.png" alt="sr" width="200px />
+<img src="special-rule.png" alt="sr" width="200px" />
 
 > Each job is assigned to a single GPU. -- abchan
 
